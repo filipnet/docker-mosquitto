@@ -43,3 +43,10 @@ A docker-compose.yaml file can reference a Dockerfile, but a Dockerfile can’t 
 ```
 docker-compose up -d --pull
 ```
+
+## Accessing the console
+You can connect to a console of an already running mosquitto container with following command:
+
+```docker ps``` - lists all your currently running container
+```docker exec``` -it mosquitto /bin/sh - connect to mosquitto container by name
+```docker logs mosquitto``` - gives you the output of the mosquitto container while starting
