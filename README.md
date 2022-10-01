@@ -8,13 +8,17 @@ cd docker-mosquitto
 docker build .
 ```
 
-## Local directories
+## Create Docker bind mounts
+
+You should create similar folders on your host system if you want to use bind mounts, e.g.:
 ```
-mkdir -p /data/docker/mosquitto/config/
-mkdir -p /data/docker/mosquitto/data/
-mkdir -p /data/docker/mosquitto/log/
+mkdir -p /data/docker/mosquitto/{config,data,log}
 ```
-Place mosquitto.conf in /data/docker/mosquitto/config/
+and change ownership to our former created mosquitto user:
+```
+chown -R mosquitto:mosquitto /data/docker/mosquitto
+```
+Place mosquitto.conf in ```/data/docker/mosquitto/config/```
 
 # Deployment
 The contents of a Dockerfile describe how to create and build a Docker image, while docker-compose is a command that runs Docker containers based on settings described in a docker-compose.yaml file.
