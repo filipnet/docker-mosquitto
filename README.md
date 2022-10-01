@@ -1,6 +1,10 @@
 # docker-mosquitto
 Mosquitto Docker image with SSL/TLS support
 
+## Container port listener
+* ```1883``` - the standard port of mosquitto
+* ```9001``` - the standard websockets port of mosquitto
+
 ## Download and build
 ``` 
 git clone https://github.com/filipnet/docker-mosquitto.git
