@@ -20,7 +20,9 @@ Place mosquitto.conf in /data/docker/mosquitto/config/
 The contents of a Dockerfile describe how to create and build a Docker image, while docker-compose is a command that runs Docker containers based on settings described in a docker-compose.yaml file.
 
 ## Build docker image
+```
 docker build -t filipnet/mosquitto:latest .
+```
 
 ## Build docker image and create container 
 ```
