@@ -17,7 +17,7 @@ mkdir -p /data/docker/mosquitto/log/
 Place mosquitto.conf in /data/docker/mosquitto/config/
 
 ## Build docker image
-docker build -t filipnet/mosquitto .
+docker build -t filipnet/mosquitto:latest .
 
 ## Build docker image and create container 
 ```
