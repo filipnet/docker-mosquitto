@@ -36,7 +36,7 @@ docker run -ti -p 1883:1883 -p 9001:9001 \
 ## Build by using docker-compose 
 The docker-compose up command creates a container parameterized according to the YAML file and then runs it. That command then uses the docker-compose.yaml file to run a container
 ```
-docker-compose up -d
+docker-compose up -d --pull
 ```
 
 ## Dockerfile and docker-compose combined
