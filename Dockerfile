@@ -12,7 +12,6 @@ COPY config /mosquitto/config
 RUN chown -R mosquitto:mosquitto /mosquitto 
 VOLUME ["/mosquitto/config", "/mosquitto/data", "/mosquitto/log"]
 
-
 EXPOSE 1883 9001
 
 ADD docker-entrypoint.sh /usr/bin/
