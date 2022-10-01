@@ -5,8 +5,11 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: mosquitto
-    image: filipnet/mosquitto:latest
+    image: filipnet/mosquitto:${TAG}
     #cpus: 1.5
     #mem_limit: 2048m
     ports:
-      - "1883:1883/tcp"
+      - "${MQTT_PORT}:1883/tcp"
+    environment:
+      - TAG=latest
+      - MQTT_PORT=1883
